@@ -1,0 +1,12 @@
+.news {
+  width: 80%;
+  font-size: 0.7em;
+}
+
+.news h1 {
+  margin: 0;
+  position: absolute;
+  top: 0.05em;
+  right: 0.1em;
+  text-align: right;
+}

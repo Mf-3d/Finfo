@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://mf7cli.ml/css3/main.css"/>
+        <link rel="stylesheet" href="css3/finfo.css"/>
+        <script>
+            window.api.on('update_status', (event, data)=>{
+                document.querySelector('#cpus').innerHTML = `${data.cpu}%`;
+                let bytesValue = data.memory;
+                let gbValue = (bytesValue / (1000 * 1000 * 1000)).toFixed(2);
+                document.querySelector('#memory').innerHTML = `${gbValue}GB`;
+            });
+        </script>
+    </head>
+    <body>
+        <header style="position: fixed; width: 100%; -webkit-app-region: drag; background: #bebebe28; backdrop-filter: blur(10px);"></header>
+        <main>
+            <div id="mainColumn">
+                <div class="page_title">
+                    <h1>finfo</h1>
+                    &nbsp;beta.
+                </div>
+                <div class="news">CPU使用率<h1 style="display: inline-block;" id="cpus"></h1></div>
+                <div class="news">メモリ使用量<h1 style="display: inline-block;" id="memory"></h1></div>
+                <div class="news">バージョン: v1.0.0</div>
+            </div>
+        </main>
+    </body>
+</html>
