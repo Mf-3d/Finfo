@@ -1,4 +1,6 @@
 const electron = require("electron");
+const Store = require('electron-store');
+const store = new Store();
 
 let win;
 let winSize;
@@ -11,7 +13,7 @@ function nw() {
     backgroundColor: '#ffffff',
     title: 'Finfo',
     titleBarStyle: 'hidden',
-    // icon: `${__dirname}/src/image/logo.png`,
+    // icon: `${__dirname}/src/logo.png`,
     webPreferences: {
       worldSafeExecuteJavaScript: true,
       nodeIntegration:false,
@@ -23,6 +25,14 @@ function nw() {
   winSize = win.getSize();
 
   win.loadFile(`${__dirname}/src/views/index.html`);
+
+  win.on('resize', () => {
+    winSize = win.getSize();
+  });
+
+  win.on('close', (event) => {
+    store.set('window.window_size', win.getSize());
+  });
 }
 
 setInterval(async () => {
@@ -33,4 +43,6 @@ setInterval(async () => {
   });
 }, 5000);
 
-electron.app.on("ready", nw);
+electron.app.on("ready", () => {
+  nw();
+});
