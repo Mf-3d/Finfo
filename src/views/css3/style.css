@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+body {
+  /* background-image: url('../image/background/loona-oec.jpeg'); */
+  background-size: cover;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  background-image: linear-gradient(45deg,#fafffd, #002c38);
+  min-height: 100%;
+  color: #272727;
+}
+
+main {
+  margin-top: 4em;
+
+  padding: 1em;
+  display: flex;
+}
+
+.sns-button {
+  text-align: right;
+  padding-right: 1em;
+  margin-bottom: 0em;
+  font-size: 30px;
+}
+
+.sns-button > a {
+  color: #fff;
+}
+
+.sns-button > a:hover {
+  color: #fff;
+}
+
+#mainColumn {
+  backdrop-filter: blur(10px);
+  border: #b2b2b22b solid 1px;
+  background: #ffffff0b;
+  border-radius: 5px;
+  width: 70%;
+  margin: 1em;
+  padding: 1em;
+}
+
+/* ページ系 */
+.page_title > h1 {
+  display: inline-block; 
+  _display: inline;
+}
+
+/* ヘッダー(?) */
+header {
+  background: #202020;
+  padding: 1em;
+  color: #f7f7f7;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+header > #header_title {
+  padding: 1em;
+}
+
+a {
+  color: #009ed2;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+#linksColumn > a  {
+  color: #d4d4d4;
+}
+
+#linksColumn > a:hover  {
+  color: #d4d4d4;
+}
+
+a:hover {
+  color: #00bfff;
+}
+
+header > #header_links {
+  position: absolute;
+  text-align: right;
+  right: 2em;
+  display: inline-block; 
+  _display: inline;
+}
+
+header > #header_links > a {
+  margin: 0.1em;
+  margin-right: 1em;
+}
+
+/* キラリと光るやつ(?) */
+.reflection {
+  padding-left: 1em;
+  width: 200px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  background:#3f3f3f29;
+  margin: 0.25em;
+  display: inline-block;
+  _display: inline;
+}
+.reflection::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: -180px;
+  left: 0;
+  background: #fff;
+  opacity: 0;
+  transform: rotate(45deg);
+  animation: reflect 10s ease-in-out infinite;
+  -webkit-transform: rotate(45deg);
+  -webkit-animation: reflect 10s ease-in-out infinite;
+}
+@keyframes reflect {
+  0% { transform: scale(0) rotate(45deg); opacity: 0; }
+  79% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+  80% { transform: scale(4) rotate(45deg); opacity: 1; }
+  90% { transform: scale(50) rotate(45deg); opacity: 0; }
+  100% { transform: scale(0) rotate(45deg); opacity: 0; }
+}
+@-webkit-keyframes reflect {
+  0% { transform: scale(0) rotate(45deg); opacity: 0; }
+  79% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+  80% { transform: scale(4) rotate(45deg); opacity: 1; }
+  90% { transform: scale(50) rotate(45deg); opacity: 0; }
+  100% { transform: scale(0) rotate(45deg); opacity: 0; }
+}
+
+#linksColumn {
+  padding: 1em;
+  padding-top: 0em;
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+#newsColumn {
+  padding: 1em;
+  padding-top: 0em;
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.flowbtn10{
+  display:inline-block;	
+  font-size:35px;
+  text-decoration:none;
+  transition:.5s;
+  color:#444;	
+}
+
+.flowbtn10 .fa-twitter:hover{
+  color:#55acee;
+}
+
+iframe {
+  border: none;
+  border-radius: 5px;
+}
+
+.news {
+  padding: 1em;
+  width: 640px;
+  position: relative;
+  overflow: hidden;
+  background:#3f3f3f29;
+  margin: 0.25em;
+  display: inline-block;
+  _display: inline;
+}
