@@ -15,7 +15,6 @@ function nw() {
     titleBarStyle: 'hidden',
     // icon: `${__dirname}/src/logo.png`,
     webPreferences: {
-      worldSafeExecuteJavaScript: true,
       nodeIntegration:false,
       contextIsolation: true,
       preload: `${__dirname}/preload/preload.js`
